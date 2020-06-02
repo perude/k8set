@@ -31,6 +31,7 @@ alias k8set='. /Users/i320159/cloud/modelt/scripts/kubeconfig_set_script/k8set.s
 Alias for session was defined.
 Script has been finished.
 ```
+# Uninstalling
 
 If you want to remove it just execute it with one parameter : remove
 ```
