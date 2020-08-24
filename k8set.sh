@@ -29,7 +29,11 @@ elif [ "${arrKubeconfigs[0]}" == "$current_folder/*.kubeconfig" ]; then
 else
     echo "There are $list_size kubeconfig files in current folder"
     for ((i = 0 ; i < $list_size ; i++)); do
-        echo "Type $i for - ${arrKubeconfigs[$i]}"
+	if ! (( $i % 2 )); then
+		echo -e "\033[0;34mType $i for - ${arrKubeconfigs[$i]}\033[0m"
+	else 
+		echo "Type $i for - ${arrKubeconfigs[$i]}"
+	fi
     done
 
     read -p "Please type here file number :" file_number 
